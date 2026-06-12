@@ -195,7 +195,7 @@ fig_global = go.Figure(go.Bar(
 
 fig_global.update_layout(
     xaxis=dict(title="Porcentaje de Cumplimiento de la Meta Final (%)", range=[0, 100], gridcolor='#cbd5e1'),
-    yaxis=dict(autorange="reversed", font=dict(size=13)),
+    yaxis=dict(autorange="reversed", tickfont=dict(size=13)),
     margin=dict(l=20, r=20, t=10, b=30),
     height=400,
     plot_bgcolor='white',
@@ -208,7 +208,7 @@ st.plotly_chart(fig_global, use_container_width=True)
 # PANEL 2: PANEL DE CONTROL DIVIDIDO POR PERSPECTIVA CON SUS KPI
 # -------------------------------------------------------------
 st.markdown("<div class='section-header'>PANEL 2: Desglose Detallado por Perspectiva Estratégica</div>", unsafe_allow_html=True)
-st.write("A continuación se desglosan de forma visual y abierta las cuatro dimensiones del Balanced Scorecard. Cada sección expone de manera explícita sus objetivos, indicadores de resultado (*Lagging*), proyectos estratégicos asignados e indicadores de ejecución (*Leading*).")
+st.write("A continuación se desglosan de forma visual y abierta las cuatro dimensiones del Balanced Scorecard. Cada sección expone de manera explícita sus objetivos, indicadores de resultado (Lagging), proyectos estratégicos asignados e indicadores de ejecución (Leading).")
 
 # --- PERSPECTIVA 1: FINANCIERA ---
 st.markdown("<h3 style='color:#b91c1c; border-bottom: 2px solid #ef4444; padding-bottom:5px; margin-top:25px;'>🟥 1. Perspectiva Financiera (Crecimiento y Rentabilidad)</h3>", unsafe_allow_html=True)
@@ -218,7 +218,7 @@ with c1_f:
     st.markdown("""
     **Objetivo Estratégico principal:** Incrementar la rentabilidad corporativa y expandir agresivamente la presencia de la marca en las economías globales Tier-1.
     
-    * **KPI de Resultado (Lagging Indicator):** Margen de Utilidad Neta (Línea base original $\rightarrow$ Meta del **18%** para 2028).
+    * **KPI de Resultado (Lagging Indicator):** Margen de Utilidad Neta (Línea base original a Meta del **18%** para 2028).
     * **Iniciativa Estratégica (Proyecto):** Lanzamiento global del modelo de suscripción premium *HomeGuard Subscription Plan*.
     * **KPI de Ejecución (Leading Indicator):** Número de nuevas suscripciones pagadas capturadas por trimestre.
     """)
@@ -238,7 +238,7 @@ with c1_c:
     st.markdown("""
     **Objetivo Estratégico principal:** Construir relaciones basadas en la confianza absoluta, ciberseguridad avanzada y diferenciación tecnológica frente a competidores directos.
     
-    * **KPI de Resultado (Lagging Indicator):** Net Promoter Score (NPS) global (Línea base crítica de 32 $\rightarrow$ Meta de **70 puntos** para 2027).
+    * **KPI de Resultado (Lagging Indicator):** Net Promoter Score (NPS) global (Línea base crítica de 32 a Meta de **70 puntos** para 2027).
     * **Iniciativa Estratégica (Proyecto):** Campaña masiva de concientización para el consumidor *"Secure by Design"*.
     * **KPI de Ejecución (Leading Indicator):** Volumen total de clientes activos alcanzados e interactuando con la campaña.
     """)
@@ -278,14 +278,14 @@ with c1_o:
     st.markdown("""
     **Objetivo Estratégico principal:** Desarrollar al máximo las competencias tecnológicas internas del personal y fomentar un ecosistema ágil de innovación continua.
     
-    * **KPI de Resultado (Lagging Indicator):** Porcentaje de Ingenieros con Certificación Avanzada en IA y Ciberseguridad (Línea base del 10% $\rightarrow$ Meta del **80%** para 2027).
+    * **KPI de Resultado (Lagging Indicator):** Porcentaje de Ingenieros con Certificación Avanzada en IA y Ciberseguridad (Línea base del 10% a Meta del **80%** para 2027).
     * **Iniciativa Estratégica (Proyecto):** *Project TalentForge AI* (Universidad interna corporativa para el desarrollo y Upskilling técnico).
     * **KPI de Ejecución (Leading Indicator):** Número acumulado de empleados que acreditan exitosamente sus módulos de certificación.
     """)
 
 with c2_o:
     st.markdown("""
-    * **KPI de Resultado Alterno:** Ritmo de Innovación del Portafolio (Línea base de 2 $\rightarrow$ Meta de **6 nuevas funciones/productos disruptivos** lanzados por año para 2027).
+    * **KPI de Resultado Alterno:** Ritmo de Innovación del Portafolio (Línea base de 2 a Meta de **6 nuevas funciones/productos disruptivos** lanzados por año para 2027).
     * **Iniciativa Estratégica (Proyecto):** Establecimiento institucional de Sprints de Innovación Cruzada Interfuncional.
     * **KPI de Ejecución (Leading Indicator):** Número total de talleres de Sprints de innovación completados satisfactoriamente por trimestre.
     """)
@@ -305,7 +305,7 @@ data_financiera = {
     "Valor Presente Neto (VPN)": ["$77,160", "$52,945", "$25,342", "$112,044"],
     "Tasa Interna Retorno (TIR)": ["19.6%", "17.8%", "16.7%", "22.5%"],
     "Índice de Rentabilidad (PI)": ["1.17", "1.14", "1.12", "1.22"],
-    "Dictamen Ejecutivo": ["🟩 GO", "🟩 GO", "🟩 GO", "🟩 GO"]
+    "Dictamen Ejecutivo": ["GO", "GO", "GO", "GO"]
 }
 df_fin = pd.DataFrame(data_financiera)
 
